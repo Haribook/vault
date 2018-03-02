@@ -37,3 +37,5 @@ vault list secret/some-team
 vault read secret/some-team/some-app/database
 
 vault read secret/some-team/slack
+
+vault read -format=json secret/some-team/some-app/database
