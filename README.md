@@ -23,3 +23,17 @@ vault write -field signed_key ssh/sign/username public_key=@.ssh/id_rsa.pub > $H
 Creating/Updating your SSH config file
 
 ssh jenkins-master
+
+Write data to Vault
+
+vault write secret/some-team/some-app/database dbuser=foo dbpassword=bar
+
+vault write secret/some-team/slack api_key=foobarbaz
+
+Read data from VaultPermalink
+
+vault list secret/some-team
+
+vault read secret/some-team/some-app/database
+
+vault read secret/some-team/slack
